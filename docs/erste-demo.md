@@ -1,106 +1,98 @@
 # The Isle — Erste Demo
 
-Stand: 11. Oktober 2026. **Vorgeschlagener Umfang**, noch keine implementierte Demo. Der Grafikstil **B — Gemaltes Abenteuer** ist festgelegt; siehe [visuelle Referenz](grafikstil.md).
+Stand: 11. Oktober 2026. Unity-Projekt: Game/. Startszene: Assets/TheIsle/Scenes/FirstVoyage.unity. Grafikrichtung **B — Gemaltes Abenteuer** bleibt verbindlich. Die Umsetzung verwendet eigene Pinseltexturen, weiche Wolken und einfache 3D-Modelle als spielbaren Grafikprototyp. Die Konzeptzeichnung bleibt das Qualitätsziel für spätere fertige Assets.
 
-## 1. Ziel
+## Ablauf
 
-Ein etwa 20–30 Minuten langer erster Durchlauf soll den vollständigen Reiseablauf zeigen. Der Spieler steuert einen Zeppelin, erkundet unbekannte Inseln, handelt, wechselt an einem festen Punkt die Ebene und erlebt, wie ein Sturm seine Rückreise verändert. Anschließend baut er sein Schiff aus und kann eine weitere Fahrt antreten.
+Eine vollständige Reise verbindet Erkundung, Fluggefühl, Handel, feste Ebenenwechsel, Kampf, einen veränderten Rückweg und Schiffsausbau. Die langfristige Zielzeit von 20–30 Minuten ist noch keine gemessene Spieldauer. Die kleine Testwelt ermöglicht kürzere Wiederholungen.
 
-Die Demo soll insbesondere beantworten, ob das Fliegen Spaß macht und ob Entdeckung, Reiseplanung und Ausbau die nächste Expedition reizvoll machen. Die angegebene Dauer ist ein Ziel für das Spielerlebnis, keine Schätzung der Entwicklungszeit.
+1. Vier geschützte Auftragsteile liegen im Zeppelin. Im oberen Hafen Morgenanker handeln, ausbauen und Service nutzen.
+2. Selbst fliegen, Wind und Trägheit kennenlernen. Der Navigator gibt eine Richtung zur Hauptpassage; die Karte zeigt nur entdeckte Orte.
+3. Die Passage entdecken und mit E in die untere Ebene wechseln. Ein Wechsel außerhalb einer Passage ist ausgeschlossen.
+4. Tiefenlicht entdecken, anlegen und die Teile für 350 Kredit liefern. Eine Piratenbegegnung erprobt Breitseite, Vorhalt, Ausweichen und Rückzug.
+5. Die Lieferung löst eine Sturmwarnung aus: stärkerer Wind, gesperrte Hauptpassage und höhere Teilepreise. Die Windtreppe bleibt offen; ihr Funkhinweis kartiert den Rettungsweg.
+6. Zur oberen Werft zurückkehren und einen Ausbau kaufen. Freies Fliegen, Handel und optionale Wrackbergung bleiben möglich.
 
-## 2. Ein konkretes Abenteuer
+**Duell** startet ein wiederholbares Kampfszenario mit gleichwertigen Schiffen und ruhigem Wind. **Neue Reise** erzeugt eine andere Ausgangswelt und setzt Auftrag, Geld, Besatzung und Erkundung zurück. Spielstände und dauerhafter Fortschritt sind noch nicht umgesetzt.
 
-### Auftrag: Versorgung hinter den Wolken
+## Welt und Flug
 
-Ein abgelegener Hafen im Sturmgürtel benötigt Ersatzteile. Der Startauftrag nennt einen Hinweis auf einen Wolkenschacht und die vermutete Lage des Zielhafens. Diese Hinweise ersetzen noch keine erkundete Karte.
+- Fünf Inseln, zwei Häfen, zwei Höhenebenen, zwei feste Übergänge und ein Wrack.
+- Seedabhängige Rotation und Positionsabweichungen in einer kleinen, zusammenhängenden Welt.
+- Entdeckte Orte bleiben während der Partie kartiert. Die Karte zeigt nur aktuelle Ebene und bekannte Passagen; die Weltansicht enthüllt Inseln im Besatzungs-Sichtradius.
+- Physikalischer Schub, Drehmoment, Bremse und Trägheit auf XZ. Orthografische isometrische Kamera.
+- Gegen-, Rücken- und Seitenwind, Böen und Windschatten hinter Inseln.
+- Fracht erhöht Masse, Verbrauch und Bremsweg. Zusätzliche Masse mindert Beschleunigung und Drehfähigkeit.
+- Bezahlter Hafenservice liefert Energie; bei leerer Energie bleibt langsamer Notantrieb.
+- Zwei Hafenfraktionen mit verschiedenen Preisen. Ruf, Diplomatie und Verhandlungen sind spätere Erweiterungen.
 
-1. **Start im Sonnenhafen:** Zeppelin und zwei Besatzungsrollen kennenlernen. Ersatzteile laden, Energiereserve sehen und ablegen.
-2. **Erste Flugstrecke:** Beschleunigen, bremsen und eine Insel umrunden. Seiten- und Gegenwind machen das Flugverhalten spürbar.
-3. **Unbekannte Region:** Fog of War aufdecken, einen festen Wolkenschacht entdecken und den Übergang selbst durchfliegen.
-4. **Zielhafen:** Ersatzteile liefern und handeln. Optional ein Wrack in der Umgebung entdecken und zusätzliches Bergungsgut aufnehmen.
-5. **Veränderte Rückreise:** Eine angekündigte Sturmfront verändert Wind und Nutzbarkeit der Hauptpassage. Eine zweite Passage eröffnet einen anderen Rückweg. Unterwegs kann eine Piratenbegegnung auftreten.
-6. **Ausbau:** Im Starthafen Erlös und Bergungsgut verwerten. Zwischen zusätzlichem Frachtraum, besserem Motor und Bergungswinde wählen. Der Ausbau ist am Schiff sichtbar und verändert die nächste Fahrt.
+## Breitseitenkampf
 
-Die Demo endet mit einer erfüllten ersten Reise und einem verfügbaren neuen Ziel. Freies Weiterfliegen und Handeln in derselben kleinen Welt bleiben möglich.
+Jede Seite hat zwei Kanonen und einen **60°-Feuerbogen**, ±30° um die Querrichtung. Bug und Heck besitzen keine Geschütze. Die Maus zielt innerhalb dieser Bögen; Q/R können eine direkte seitliche Salve abgeben. Geschosse fliegen tatsächlich, brauchen Vorhalt und werden durch Inseln abgefangen.
 
-## 3. Spielwelt und Erkundung
+Beide Waffenbänke teilen dieselbe Geschützmannschaft. Eine Bank benötigt bei zwei Geschützleuten zehn Sekunden Nachladearbeit; zwei leere Bänke teilen die Kapazität und brauchen zusammen zwanzig Sekunden. Drehen verdoppelt daher nicht die Nachladeleistung.
 
-- **Zwei Ebenen:** Sonneninseln und Sturmgürtel.
-- **Fünf Inseln:** Drei in der oberen, zwei in der unteren Ebene. Zwei davon besitzen Versorgungshäfen; die übrigen bieten Orientierung, Entdeckungen oder Bergungsorte.
-- **Zwei feste Übergänge:** Haupt- und Alternativpassage verbinden dieselben Ebenen und sind grundsätzlich in beide Richtungen nutzbar. Wetter kann ihre aktuellen Bedingungen verändern.
-- **Neue Anordnung pro neuem Durchlauf:** Positionen und Routen variieren innerhalb spielbarer Grenzen. Versorgung, Reichweite, Hauptauftrag und Alternativpassage werden zusammen geprüft.
-- **Fog of War:** Zu Beginn ist der Starthafen bekannt. Entdeckte Inseln und Übergänge bleiben innerhalb der Partie kartiert. Aktuelle Schiffspositionen und Wetter benötigen aktuelle Sicht oder Meldungen.
-- **Energie und Rückwege:** Die alternative Route muss mit vernünftiger Vorbereitung erreichbar sein. Ein erkennbarer Rückzugs- oder Rettungsweg gehört zum Entwurf.
+Abstimmungswerte: 280 Rumpf-HP, 8 Rumpfschaden pro Kugel, 16 pro vollständig treffender Salve. Treffer in Modulzonen verursachen zusätzlich vier Modulschaden, jedoch keinen zusätzlichen Rumpfschaden. Beschädigte Waffen laden langsamer; beschädigte Motoren verlieren Leistung. Komponenten behalten auch bei 0 HP begrenzte Restfunktion.
 
-Die genaue Regel für das Laden und Fortsetzen gespeicherter Partien bleibt eine offene Entscheidung. Ein Neustart als neuer Durchlauf erzeugt in diesem Vorschlag eine neue Ausgangswelt.
+**Ziel: etwa 3–5 Minuten für einen ebenbürtigen Kampf einschließlich Manövern.** Es gibt keinen Mindesttimer. Dauer und Siegquote müssen mit menschlichen Spieltests gemessen werden; alle Zahlen sind Startwerte.
 
-## 4. Schiff und Fluggefühl
+Sinnvolle Strategien: Wind und Abstand nutzen, blinde Bug-/Heckbereiche kreuzen, beim Nachladen ausweichen, Deckung und Vorhalt einsetzen, Motor-/Waffenbereiche treffen, Unterbesatzung zu Reparaturen abziehen oder zurückziehen. Nach mehr als 140 Metern Trennung für zwölf Sekunden endet eine begonnene Begegnung. Die KI sucht seitliche Feuerpositionen, weicht beim Laden aus, nutzt begrenzte Reparaturen und zieht sich bei schwerem Schaden zurück. Sie verwendet dieselben Regeln und Kräfte wie das Spielerschiff.
 
-- Ein kleiner Startzeppelin mit sichtbaren Modulaufnahmen.
-- Direkte Steuerung von Schub, Richtung und Bremsen beziehungsweise Gegenschub.
-- Spürbare Beschleunigung, Trägheit, Drift und Bremswege.
-- Gegen-, Rücken- und Seitenwind; Windschatten und einzelne Böen.
-- Frachtgewicht beeinflusst Beschleunigung und Handhabung.
-- Energieverbrauch hängt vom eingesetzten Schub und aktiven Systemen ab.
-- Anlegen in verständlichen Hafenbereichen.
-- Drei austauschbare Ausbauten: Frachtraum, zusätzlicher Motor und Bergungswinde. Die Wahl verändert Kosten, Gewicht oder Nutzen; genauere Werte werden beim Flugtest abgestimmt.
+Verhandlungen, Frachtabgabe, Entern und Kapitulation sind noch nicht umgesetzt.
 
-Der Startauftrag muss mit der Grundausrüstung erfüllbar sein. Die Bergungswinde eröffnet eine zusätzliche Aktivität für spätere Fahrten in der Demo. Für den ersten Durchlauf kann ein kleines, zugängliches Fundstück direkt aufgenommen werden, um Bergung anzudeuten.
+## Hauptbesatzung und Unterbesatzung
 
-## 5. Besatzung
+Verbindliche Nutzerregel: **Hauptbesatzung kann ausschließlich bei kompletter Schiffzerstörung sterben.** Treffer oder beschädigte Komponenten töten keine Hauptperson. Im Teststand bedeutet Rumpf-HP 0 komplette Zerstörung und Verlust der Hauptbesatzung. Eine spätere Rettungs- oder Todeswahrscheinlichkeit ist offen.
 
-- **Navigator:** Gibt verständliche Hinweise auf Wetteränderungen, ungünstige Strömungen und eine mögliche alternative Passage. Hinweise auf unbekannte Orte verraten zunächst eine Richtung, nicht die vollständige Karte.
-- **Maschinist:** Kann während der Reise einen beschädigten Motor reparieren. Reparatur benötigt einen begrenzten Vorrat und hat eine sichtbare Wirkung auf das Schiff.
+| Station | Hauptfähigkeit | Wirkung der Unterbesatzung |
+|---|---|---|
+| Navigation | Orientierung und Wetterhinweise | Sichtweite und Ruderleistung |
+| Maschine | Feldreparatur und Maschinenbetrieb | Reparaturtempo und Motorleistung |
+| Geschütze | Betrieb beider Breitseiten | gemeinsames Nachladetempo |
 
-Der Beitrag beider Rollen wird durch kurze Meldungen und Systemzustände sichtbar. Tiefere Persönlichkeiten, Beziehungen und Mannschaftsentwicklung sind mögliche spätere Erweiterungen.
+Sechs Unterbesatzungsmitglieder beginnen mit zwei pro Station. Maximal vier arbeiten an einer Station. Versetzen dauert fünf Sekunden ohne Arbeitsleistung; dieselbe Person darf zehn Sekunden nach Beginn erneut versetzt werden. Die Gesamtmenge bleibt sechs. Ohne Unterbesatzung arbeitet die Hauptperson langsam weiter. Arbeitsfaktor: 0,4 / 1,0 / 1,6 bei null / zwei / vier Personen. Geschützleute zur Maschine versetzen beschleunigt Reparatur und verlangsamt Nachladen.
 
-## 6. Handel, Kontakte und Gefahr
+Individuelle Persönlichkeiten, Erfahrung und Beziehungen sowie Verwundung oder Tod der Unterbesatzung sind noch offen.
 
-- Drei Güter mit klaren Funktionen: Ersatzteile, Versorgungsgüter und ein wertvolles Gut aus der unteren Ebene.
-- Kauf und Verkauf an den beiden Häfen; nachvollziehbare lokale Preisunterschiede.
-- Ein Hauptauftrag sowie eine optionale Bergungs- oder Handelsgelegenheit.
-- Zwei erkennbare Fraktionen an den Häfen. Eine einfache Entscheidung beeinflusst eine Gebühr, einen Preis oder den Zugang zu einem Folgeauftrag.
-- Eine Piratenbegegnung mit Ausweichen, Flucht oder Abgabe eines Teils der Fracht. Der erste Entwurf erprobt dabei vor allem Manöver und wirtschaftliche Entscheidungen.
-- Reparaturen und Energieversorgung an Häfen.
-- Bei einem schweren Fehlschlag Rückführung zum letzten Hafen mit einem verständlichen Verlust an Geld oder Fracht. Die endgültige Verlustregel ist noch abzustimmen.
+## Reparaturen
 
-## 7. Ein Weltereignis: Sturmfront
+- Unterwegs ein Ziel wählen: Rumpf, Motor oder Waffenbank. Nur ein Ziel wird gleichzeitig bearbeitet.
+- Etwa 0,8 HP/s bei zwei Maschinisten, maximal etwa 1,3 HP/s. Fertige Ziele oder leere Vorräte beenden die Arbeit.
+- **Gemeinsames Budget von 35 reparierten HP je Hafenversorgung**, für alle Komponenten zusammen. Zielwechsel setzt es nicht zurück.
+- Jeder reparierte HP verbraucht 0,1 Reparaturteile. Bergung erhöht den Vorrat, erneuert aber nicht das Budget.
+- Gesundheit überschreitet niemals Maximalwerte. Hafenservice kann komplett zerstörte Schiffe nicht wiederbeleben.
+- Bezahlter Werftservice stellt Integrität, Energie, Teile und Budget wieder her; der Preis steigt mit Rumpfschaden.
 
-Der Sturm hat drei erkennbare Phasen:
+Dauerhafte Schäden, Ersatz ganzer Module und längere Werftarbeiten können später folgen.
 
-1. **Vorwarnung:** Hafenmeldung, Navigatorhinweis und sichtbare Wolkenveränderung.
-2. **Aktive Phase:** Andere Windverhältnisse, eingeschränkte Hauptpassage und eine notwendige neue Routenentscheidung.
-3. **Folgen:** Reparaturbedarf am Hafen schafft Nachfrage nach Ersatzteilen und einen möglichen Folgeauftrag.
+## Module, Handel und Sound
 
-Für den ersten Demonstrationsdurchlauf darf der Sturm an den Fortschritt des Startauftrags gekoppelt sein. So werden seine Vorzeichen und Folgen zuverlässig erlebbar. Zufällige Auslösung und weitere Ereignisketten werden danach entwickelt.
+Laderaum: sechs zusätzliche Plätze und mehr Gewicht. Motor: mehr Schub bei höherem Verbrauch. Winde: Wrackbergung bei zusätzlicher Masse. Alle Ausbauten erscheinen am Schiff. Bauteile, Vorräte und Kristalle haben verschiedene Hafenpreise. Auftragsteile können nicht verkauft werden.
 
-Die Alternativpassage wird räumlich sinnvoll angeordnet und über Hinweise auffindbar. Der Sturm soll eine Entscheidung schaffen, deren Konsequenzen der Spieler einschätzen kann.
+Eigene synthetisierte WAVs liefern Wind, Motor, Kanonen, Treffer, Reparatur, Hafen, Ebenenübergang, Erfolg und UI-Rückmeldung. Lautstärke und Stummschaltung bleiben als lokale Einstellungen erhalten. Klang und Mischung sind Prototypwerte; die Lautsprecherausgabe muss der Spieler beurteilen.
 
-## 8. Grafik, Oberfläche und Klang
+## Technik und Bedienung
 
-- Die Spielszene folgt B: gemalte Wolken, warme Lichtstimmung und sanfte Materialtexturen in isometrischer Darstellung.
-- Schiff, Hafen, Inseln und Übergänge erhalten klare Silhouetten und unterscheidbare interaktive Bereiche.
-- Bewegte Wolken, Fahnen und Effekte zeigen Wind an. Die beiden Ebenen erhalten unterschiedliche Licht- und Wetterstimmungen.
-- Kleine Übersichtskarte mit erkundeten Orten und bekannten Übergängen.
-- Anzeigen für Energie, Fracht, Schiffszustand, Besatzungshinweise und Auftragsziel.
-- Einfache Motor-, Wind- und Hafengeräusche; hörbare Rückmeldung bei Schäden und beim Anlegen.
+Unity **6000.6.4f1**, URP **17.6.0**, C#, Input System, uGUI. Die bereits installierte Version ermöglicht sofortige Entwicklung. Arbeitsannahme: Windows-Einzelspieler. Cloud, Mehrspieler und Monetarisierung gehören nicht zur Demo. CLI/Pipeline steuert nur dieses Projekt; Startszene und Assets entstehen über die Editor-API.
 
-Die erste Szene dient gleichzeitig als Prüfung des gewählten Grafikstils in tatsächlicher Spielgröße. Die konkrete 2D-/3D-Umsetzung wird mit der Technikentscheidung festgelegt.
+| Eingabe | Aktion |
+|---|---|
+| W/S oder hoch/runter | Schub vor/zurück |
+| A/D oder links/rechts | Drehen |
+| Leertaste | Bremsen |
+| E | Hafen, Passage oder Bergung |
+| Q/R | Backbord-/Steuerbordsalve |
+| linke/rechte Maustaste | jeweilige Breitseite zum Mausziel |
+| Mausrad oder +/− | Manueller Kamerazoom |
+| C | Automatische Kamera zurücksetzen |
+| Z/X | Kamera in 45°-Schritten drehen |
+| H/Esc | Hilfe und Pause |
+| M | Stummschaltung |
 
-## 9. Kriterien für eine gelungene Demo
+Zum Anlegen auf höchstens 3 m/s abbremsen. Crewwechsel, Reparatur, Handel, Service und Ausbau erfolgen über HUD-Schaltflächen. Die Hilfe pausiert Simulation und Sound. Die Kamera blickt in Flugrichtung voraus, beruhigt sich beim Hafenanflug und hält im Kampf beide Schiffe im Bild. Manueller Zoom bleibt erhalten, bis C die Automatik zurücksetzt. Flugsteuerung ausschließlich per Tastatur; es gibt keine Mauskurs-Hilfe.
 
-1. Eine erstmalig spielende Person kann den Startauftrag mit den eingeblendeten Hinweisen erfüllen.
-2. Beladung und Wind beeinflussen das Fliegen deutlich und verständlich.
-3. Neue Regionen und Passagen werden durch eigenes Fliegen entdeckt.
-4. Der Ebenenwechsel funktioniert ausschließlich an den vorgesehenen Übergängen.
-5. Navigator und Maschinist leisten je einen sichtbaren Beitrag während der Reise.
-6. Der Sturm verändert die Routenentscheidung und erzeugt eine nachvollziehbare Folge.
-7. Der Spieler kann handeln und aus dem ersten Erlös einen Ausbau finanzieren.
-8. Der Ausbau verändert eine weitere Fahrt innerhalb der Demo.
-9. Ein neuer Durchlauf bietet eine andere, weiterhin spielbare Insel- und Routenanordnung.
+## Prüfung und weitere Arbeit
 
-## 10. Weitere Ausbaustufen
+Die Prüfevidenz steht in [Validierung](demo-validierung.md). Automatisierte Regelprüfungen ersetzen keine menschlichen Flug-, Klang- oder Balancingtests. B benötigt nach dem funktionalen Prototyp ausgearbeitete Modelle, Effekte, Beleuchtung und hochwertigere gemalte Texturen.
 
-Nach dieser Demo können größere Schiffe, eine dritte Ebene, Waffen und ausführlicher Kampf, zusätzliche Mannschaftsrollen, tiefere Fraktionsbeziehungen und weitere Weltereignisse ergänzt werden. Inselwanderung, Hafengründung und Inselbruch sind besonders interessante spätere Veränderungen der Welt.
-
-Vor dem Beginn der Umsetzung werden Zielplattform und Engine gewählt. Der erste technische Meilenstein ist das Fluggefühl in einer kleinen Szene im gewählten Grafikstil; danach wird daraus schrittweise der vollständige Demoablauf.
+Später: größere Schiffsklassen, dritte Ebene, weitere Weltereignisse, Ruf/Diplomatie, Verhandlungen, individuelle Hauptpersonen, Speichern/Fortsetzen, Rettung und hochwertige Grafik-/Soundassets.

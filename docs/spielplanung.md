@@ -18,6 +18,9 @@ Festgelegt sind:
 - Gegenwind und Rückenwind beeinflussen das Fliegen; Wind ist Teil der Welt.
 - Der Zeppelin wird modular ausgebaut.
 - Die Besatzung spielt eine Rolle im Gameplay.
+- Hauptbesatzung besitzt Fähigkeiten und kann ausschließlich bei kompletter Schiffzerstörung sterben. Jede Hauptrolle führt Unterbesatzung, deren Zuweisung das Tätigkeitstempo beeinflusst.
+- Bereits die Demo enthält Breitseitenkampf. Schiffe schießen hauptsächlich seitlich; gleichwertige Kämpfe sollen mehrere Strategien erlauben und einige Zeit dauern.
+- Sound gehört zur Demo.
 - Handel, Piraten und Fraktionen gehören zum Konzept.
 - Fog of War verbirgt die Welt, bis sie erkundet wird.
 - Die Ausgangswelt soll bei jedem Spielstart anders sein.
@@ -308,9 +311,9 @@ Wichtige Informationen sind Windrichtung, Energiereserve, Zustand, Zuladung, Man
 
 Notlandungen, beschädigte Module, verlorene Fracht und Abschleppkosten können eine misslungene Reise in neue Aufgaben überführen. Rettungspunkte oder Hilferufe sollen eine erkennbare Chance zur Erholung geben.
 
-Die Folgen vollständiger Schiffzerstörung, möglicher Besatzungsverluste und gescheiterter Aufträge sind offen. Ebenso offen ist, ob Fortschritte über neu gestartete Durchläufe hinweg bestehen bleiben.
+Hauptbesatzung kann ausschließlich bei vollständiger Schiffzerstörung sterben. Treffer oder Modulverlust töten keine Hauptperson. Rettungswahrscheinlichkeit, Unterbesatzungsverluste und langfristige Folgen bleiben offen. Der erste Teststand verliert Hauptpersonen bei Rumpf-HP 0 und erlaubt danach einen neuen Durchlauf. Ob Fortschritte über Durchläufe hinweg bestehen bleiben, ist noch offen.
 
-## 13. Erste Demo — Vorschlag
+## 13. Erste Demo — erste Unity-Umsetzung
 
 Ziel ist, eine vollständige Reise in etwa 20–30 Minuten erlebbar zu machen: Waren kaufen, selbst fliegen, Wind nutzen, eine Passage entdecken, in die zweite Ebene gelangen, eine Gelegenheit wahrnehmen, einen Hafen erreichen und den Erlös in einen Ausbau investieren. Der genaue Ablauf und die Abnahmekriterien stehen in [Inhalt und Ablauf der ersten Demo](erste-demo.md).
 
@@ -322,9 +325,13 @@ Ziel ist, eine vollständige Reise in etwa 20–30 Minuten erlebbar zu machen: W
 - Fog of War mit dauerhaft kartierten Orten innerhalb der laufenden Partie.
 - Ein Startzeppelin, direkte Steuerung, Trägheit, Wind und Energieverbrauch.
 - Wenige Handelswaren und drei austauschbare Module, beispielsweise Frachtraum, zusätzlicher Motor und Bergungswinde.
-- Ein Maschinist und ein Navigator mit je einer spürbaren Funktion.
-- Eine Piratenbegegnung mit Flucht- und Verhandlungsmöglichkeit.
-- Zwei Fraktionen mit einer einfachen Ruf- oder Zugangsentscheidung.
+- Navigator, Maschinist und Geschützmeister mit sechs verteilbaren Unterbesatzungsmitgliedern.
+- Eine Piratenbegegnung mit Breitseitenkampf und Rückzug, plus separat wiederholbares gleichwertiges Duell. Verhandlungen folgen später.
+- Zwei Hafenfraktionen mit unterschiedlichen Preisen; Ruf- und Zugangsentscheidungen folgen später.
+- Begrenzte Feldreparatur mit gemeinsamem Budget sowie bezahlter Hafenservice.
+- Neun originale synthetisierte Sounddateien, Lautstärke und Stummschaltung.
+
+Die konkrete Implementierung und ihre Grenzen stehen in [Erste Demo](erste-demo.md), technische Evidenz in [Validierung](demo-validierung.md). Unity 6000.6.4f1 mit URP 17.6.0 wird verwendet; Windows-Einzelspieler ist die Arbeitsannahme für diesen ersten Stand. Die gemalte Darstellung ist ein funktionaler Grafikprototyp und noch nicht auf dem Qualitätsniveau der ausgewählten Konzeptzeichnung.
 
 ### Weltereignis und spätere Erweiterung
 
@@ -347,11 +354,11 @@ Weitere Ausbaustufen können Rohstofffunde und Fraktionsblockaden ergänzen. Ins
 
 1. **Spielstart und Fortsetzen:** Neue Welt nur beim Beginn eines neuen Durchlaufs oder auch beim erneuten Laden? Welche Fortschritte bleiben erhalten?
 2. **Spielmodus:** Einzelspieler oder Mehrspieler; langfristige Kampagne oder kürzere Durchläufe?
-3. **Technik und Zielplattform:** Engine, Eingabegeräte und unterstützte Plattformen sind noch nicht gewählt.
+3. **Weitere Plattformen:** Die Demo verwendet Unity und Windows mit Tastatur/Maus; zusätzliche Plattformen und Controller sind offen.
 4. **Besatzungstiefe:** Persönliche Figuren mit Beziehungen oder zunächst Rollen, Fähigkeiten und Aufgaben?
-5. **Kampf und Piraterie:** Umfang des Kampfs und Möglichkeit, selbst als Pirat aufzutreten?
+5. **Weitere Piraterie:** Breitseitenkampf ist Teil der Demo. Entern, Verhandeln und selbst als Pirat handeln bleiben offen.
 6. **Schadensfolgen:** Rettung, Wiederbeschaffung, Verlust von Schiff und Mannschaft, mögliche dauerhafte Konsequenzen?
 7. **Versorgung:** Energiequelle, Nachladen oder Betanken, Reparaturmaterial und laufende Mannschaftskosten?
 8. **Erkundungsinteraktion:** Was tut der Spieler konkret an Inseln, Ruinen und Lagerstätten — etwa scannen, bergen, handeln oder besondere Flugmanöver ausführen?
 
-Diese Punkte sind bewusst nicht als bereits beschlossene Features dargestellt. Der Grafikstil B ist ausgewählt. Die erste Demo ist als konkreter Umfang vorgeschlagen; vor der Umsetzung werden vor allem Zielplattform, Technik und Start-/Speicherlogik entschieden.
+Der Grafikstil B, die Besatzungshierarchie und seitlicher Kampf sind festgelegt. Der erste Unity-Stand setzt den Reiseablauf einschließlich Kampf und Sound um. Neue Reise bedeutet neue Seed-Welt; Speichern/Fortsetzen, individuelle Besatzungsentwicklung und langfristige Verlustregeln werden später entschieden.

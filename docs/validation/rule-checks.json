@@ -1,0 +1,21 @@
+{
+    "checkedAtUtc": "2026-10-11T16:31:05.5356838Z",
+    "succeeded": true,
+    "assertions": 8806,
+    "seedsChecked": 200,
+    "passed": [
+        "200 seeds: repeatability, distinct layouts, minimum spacing, five islands, ports on both layers, two shared gates and storm-safe alternate.",
+        "Transitions require an open nearby gate; storm-blocked main gate and alternate return route behave correctly.",
+        "Fog and nearby-site lookup respect layers; calm duel wind override works.",
+        "Crew initial population, transfer exclusion, reserved capacity, invalid transfers and closed population remain valid.",
+        "Component hits preserve officers until full destruction; destroyed ships cannot resurrect at a harbor.",
+        "200 repair-target switches preserve current budget and parts; repair stop and surviving harbor restore work.",
+        "Both broadside arcs respect plus/minus thirty degrees, bow/stern blind zones and ship rotation."
+    ],
+    "limitations": [
+        "Synchronous checks do not advance Unity time or physics.",
+        "Crew arrival/cooldown, repair-budget depletion, reload sharing, AI, projectile impacts and flight tuning require Play-mode validation.",
+        "Repair switching checks that selecting targets preserves the current budget and parts; it does not claim to exhaust the budget over time."
+    ],
+    "error": ""
+}
