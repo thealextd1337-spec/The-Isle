@@ -124,7 +124,7 @@ namespace TheIsle
         void BuildCrew()
         {
             var panel = Panel("Besatzung", canvasRoot, new Vector2(0, 0), new Vector2(0, 0), new Vector2(16, 16), new Vector2(346, 266));
-            MakeText("Crew Titel", panel, new Vector2(0, 1), new Vector2(0, 1), new Vector2(14, -12), new Vector2(316, 24), 18, Gold).text = "Besatzung & Reparatur";
+            MakeText("Crew Titel", panel, new Vector2(0, 1), new Vector2(0, 1), new Vector2(14, -12), new Vector2(316, 24), 18, Gold).text = "Mannschaft & Reparatur";
             var stations = new[] { CrewStation.Navigation, CrewStation.Engineering, CrewStation.Gunnery };
             for (int index = 0; index < stations.Length; index++)
             {
@@ -138,7 +138,7 @@ namespace TheIsle
                     CrewStation to = destination;
                     MakeButton("→ " + StationShort(to), panel, new Vector2(0, 1), new Vector2(0, 1), new Vector2(177 + targetIndex * 78, y), new Vector2(72, 25), () =>
                     {
-                        session.Notify(crew.Transfer(from, to) ? "Unterbesatzung wechselt Station: 5 Sekunden ohne Arbeitskraft." : "Versetzen nicht möglich: Ziel voll, keine verfügbare Person oder Wechselpause.");
+                        session.Notify(crew.Transfer(from, to) ? "Mannschaft wechselt Station: 5 Sekunden ohne Arbeitskraft." : "Versetzen nicht möglich: Ziel voll, keine verfügbare Person oder Wechselpause.");
                     }, 12);
                     targetIndex++;
                 }
@@ -240,7 +240,7 @@ namespace TheIsle
             starboardReload.fillAmount = combat.Reload01(Broadside.Starboard);
             danger.text = vitals.IsDestroyed ? "SCHIFF ZERSTÖRT · Neue Reise oder Duell starten" : vitals.Hull / vitals.MaxHull < .25f ? "Rumpf kritisch · Absetzen oder reparieren" : world.StormActive ? "Sturm: Hauptroute gesperrt" : string.Empty;
             foreach (var entry in crewLabels) entry.Value.text = StationName(entry.Key) + " · " + crew.Count(entry.Key) + "  (" + crew.WorkRate(entry.Key).ToString("0.0") + "×)";
-            crewInfo.text = crew.InTransit > 0 ? crew.InTransit + " im Wechsel · 5 s Transit / 10 s Wechselpause" : "6 Unterbesatzung · Hauptpersonen führen ihre Station";
+            crewInfo.text = crew.InTransit > 0 ? crew.InTransit + " im Wechsel · 5 s Transit / 10 s Wechselpause" : "6 Mannschaftsmitglieder · Hauptpersonen führen";
             repairInfo.text = (vitals.IsRepairing ? "Arbeit: " + ModuleShort(vitals.RepairTarget) : "Keine Feldreparatur") + " · Budget " + vitals.RepairBudget.ToString("0.0") + " HP\nTeile " + vitals.RepairParts.ToString("0.0") + " · Motor " + Mathf.RoundToInt(vitals.Integrity(ShipModule.Engine) * 100) + "%\nKanonen links " + Mathf.RoundToInt(vitals.Integrity(ShipModule.PortGuns) * 100) + "% · rechts " + Mathf.RoundToInt(vitals.Integrity(ShipModule.StarboardGuns) * 100) + "%";
             portPanel.SetActive(session.IsDocked);
             dockButton.gameObject.SetActive(!session.IsDocked && session.CanDock);

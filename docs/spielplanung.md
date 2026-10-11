@@ -18,7 +18,10 @@ Festgelegt sind:
 - Gegenwind und Rückenwind beeinflussen das Fliegen; Wind ist Teil der Welt.
 - Der Zeppelin wird modular ausgebaut.
 - Die Besatzung spielt eine Rolle im Gameplay.
-- Hauptbesatzung besitzt Fähigkeiten und kann ausschließlich bei kompletter Schiffzerstörung sterben. Jede Hauptrolle führt Unterbesatzung, deren Zuweisung das Tätigkeitstempo beeinflusst.
+- Mannschaft wird im Menü links unten zugewiesen. Der Begriff ersetzt Unterbesatzung; Navigation soll Reisen verbessern, Geschützbesetzung den Kampf.
+- Ankern ist überall in der aktuellen Ebene als energieverbrauchender Haltemodus möglich. Das Lichten kostet Zeit.
+- Sichtbarer Nebel über der Karte lichtet sich allmählich bei Erkundung.
+- Hauptbesatzung besitzt Fähigkeiten und kann ausschließlich bei kompletter Schiffzerstörung sterben. Jede Hauptrolle führt Mannschaft, deren Zuweisung das Tätigkeitstempo beeinflusst.
 - Bereits die Demo enthält Breitseitenkampf. Schiffe schießen hauptsächlich seitlich; gleichwertige Kämpfe sollen mehrere Strategien erlauben und einige Zeit dauern.
 - Sound gehört zur Demo.
 - Handel, Piraten und Fraktionen gehören zum Konzept.
@@ -70,6 +73,8 @@ Entdeckungsbelohnungen können sein:
 - Verkaufbare Karteninformationen.
 
 ## 4. Fliegen, Wind und Energie
+
+Die Ergänzungen nach dem ersten Flugtest sind im [Konzept für Ankern, Mannschaft und Nebel](ankern-mannschaft-nebel.md) ausgearbeitet. Das als gut bewertete Fluggefühl bei ausgewogener Besetzung ist die Basis; neue Wirkungswerte und Ankerzeiten sind Vorschläge für den nächsten Ausbau.
 
 ### Festgelegte Grundlage
 
@@ -311,7 +316,7 @@ Wichtige Informationen sind Windrichtung, Energiereserve, Zustand, Zuladung, Man
 
 Notlandungen, beschädigte Module, verlorene Fracht und Abschleppkosten können eine misslungene Reise in neue Aufgaben überführen. Rettungspunkte oder Hilferufe sollen eine erkennbare Chance zur Erholung geben.
 
-Hauptbesatzung kann ausschließlich bei vollständiger Schiffzerstörung sterben. Treffer oder Modulverlust töten keine Hauptperson. Rettungswahrscheinlichkeit, Unterbesatzungsverluste und langfristige Folgen bleiben offen. Der erste Teststand verliert Hauptpersonen bei Rumpf-HP 0 und erlaubt danach einen neuen Durchlauf. Ob Fortschritte über Durchläufe hinweg bestehen bleiben, ist noch offen.
+Hauptbesatzung kann ausschließlich bei vollständiger Schiffzerstörung sterben. Treffer oder Modulverlust töten keine Hauptperson. Rettungswahrscheinlichkeit, Mannschaftsverluste und langfristige Folgen bleiben offen. Der erste Teststand verliert Hauptpersonen bei Rumpf-HP 0 und erlaubt danach einen neuen Durchlauf. Ob Fortschritte über Durchläufe hinweg bestehen bleiben, ist noch offen.
 
 ## 13. Erste Demo — erste Unity-Umsetzung
 
@@ -325,7 +330,7 @@ Ziel ist, eine vollständige Reise in etwa 20–30 Minuten erlebbar zu machen: W
 - Fog of War mit dauerhaft kartierten Orten innerhalb der laufenden Partie.
 - Ein Startzeppelin, direkte Steuerung, Trägheit, Wind und Energieverbrauch.
 - Wenige Handelswaren und drei austauschbare Module, beispielsweise Frachtraum, zusätzlicher Motor und Bergungswinde.
-- Navigator, Maschinist und Geschützmeister mit sechs verteilbaren Unterbesatzungsmitgliedern.
+- Navigator, Maschinist und Geschützmeister mit sechs verteilbaren Mannschaftsmitgliedern.
 - Eine Piratenbegegnung mit Breitseitenkampf und Rückzug, plus separat wiederholbares gleichwertiges Duell. Verhandlungen folgen später.
 - Zwei Hafenfraktionen mit unterschiedlichen Preisen; Ruf- und Zugangsentscheidungen folgen später.
 - Begrenzte Feldreparatur mit gemeinsamem Budget sowie bezahlter Hafenservice.

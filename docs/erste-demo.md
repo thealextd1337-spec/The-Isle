@@ -36,23 +36,23 @@ Abstimmungswerte: 280 Rumpf-HP, 8 Rumpfschaden pro Kugel, 16 pro vollständig tr
 
 **Ziel: etwa 3–5 Minuten für einen ebenbürtigen Kampf einschließlich Manövern.** Es gibt keinen Mindesttimer. Dauer und Siegquote müssen mit menschlichen Spieltests gemessen werden; alle Zahlen sind Startwerte.
 
-Sinnvolle Strategien: Wind und Abstand nutzen, blinde Bug-/Heckbereiche kreuzen, beim Nachladen ausweichen, Deckung und Vorhalt einsetzen, Motor-/Waffenbereiche treffen, Unterbesatzung zu Reparaturen abziehen oder zurückziehen. Nach mehr als 140 Metern Trennung für zwölf Sekunden endet eine begonnene Begegnung. Die KI sucht seitliche Feuerpositionen, weicht beim Laden aus, nutzt begrenzte Reparaturen und zieht sich bei schwerem Schaden zurück. Sie verwendet dieselben Regeln und Kräfte wie das Spielerschiff.
+Sinnvolle Strategien: Wind und Abstand nutzen, blinde Bug-/Heckbereiche kreuzen, beim Nachladen ausweichen, Deckung und Vorhalt einsetzen, Motor-/Waffenbereiche treffen, Mannschaft zu Reparaturen abziehen oder zurückziehen. Nach mehr als 140 Metern Trennung für zwölf Sekunden endet eine begonnene Begegnung. Die KI sucht seitliche Feuerpositionen, weicht beim Laden aus, nutzt begrenzte Reparaturen und zieht sich bei schwerem Schaden zurück. Sie verwendet dieselben Regeln und Kräfte wie das Spielerschiff.
 
 Verhandlungen, Frachtabgabe, Entern und Kapitulation sind noch nicht umgesetzt.
 
-## Hauptbesatzung und Unterbesatzung
+## Hauptbesatzung und Mannschaft
 
 Verbindliche Nutzerregel: **Hauptbesatzung kann ausschließlich bei kompletter Schiffzerstörung sterben.** Treffer oder beschädigte Komponenten töten keine Hauptperson. Im Teststand bedeutet Rumpf-HP 0 komplette Zerstörung und Verlust der Hauptbesatzung. Eine spätere Rettungs- oder Todeswahrscheinlichkeit ist offen.
 
-| Station | Hauptfähigkeit | Wirkung der Unterbesatzung |
+| Station | Hauptfähigkeit | Wirkung der Mannschaft |
 |---|---|---|
 | Navigation | Orientierung und Wetterhinweise | Sichtweite und Ruderleistung |
 | Maschine | Feldreparatur und Maschinenbetrieb | Reparaturtempo und Motorleistung |
 | Geschütze | Betrieb beider Breitseiten | gemeinsames Nachladetempo |
 
-Sechs Unterbesatzungsmitglieder beginnen mit zwei pro Station. Maximal vier arbeiten an einer Station. Versetzen dauert fünf Sekunden ohne Arbeitsleistung; dieselbe Person darf zehn Sekunden nach Beginn erneut versetzt werden. Die Gesamtmenge bleibt sechs. Ohne Unterbesatzung arbeitet die Hauptperson langsam weiter. Arbeitsfaktor: 0,4 / 1,0 / 1,6 bei null / zwei / vier Personen. Geschützleute zur Maschine versetzen beschleunigt Reparatur und verlangsamt Nachladen.
+Sechs Mannschaftsmitglieder beginnen mit zwei pro Station. Maximal vier arbeiten an einer Station. Versetzen dauert fünf Sekunden ohne Arbeitsleistung; dieselbe Person darf zehn Sekunden nach Beginn erneut versetzt werden. Die Gesamtmenge bleibt sechs. Ohne Mannschaft arbeitet die Hauptperson langsam weiter. Arbeitsfaktor: 0,4 / 1,0 / 1,6 bei null / zwei / vier Personen. Geschützleute zur Maschine versetzen beschleunigt Reparatur und verlangsamt Nachladen.
 
-Individuelle Persönlichkeiten, Erfahrung und Beziehungen sowie Verwundung oder Tod der Unterbesatzung sind noch offen.
+Individuelle Persönlichkeiten, Erfahrung und Beziehungen sowie Verwundung oder Tod der Mannschaft sind noch offen.
 
 ## Reparaturen
 
@@ -92,6 +92,8 @@ Unity **6000.6.4f1**, URP **17.6.0**, C#, Input System, uGUI. Die bereits instal
 Zum Anlegen auf höchstens 3 m/s abbremsen. Crewwechsel, Reparatur, Handel, Service und Ausbau erfolgen über HUD-Schaltflächen. Die Hilfe pausiert Simulation und Sound. Die Kamera blickt in Flugrichtung voraus, beruhigt sich beim Hafenanflug und hält im Kampf beide Schiffe im Bild. Manueller Zoom bleibt erhalten, bis C die Automatik zurücksetzt. Flugsteuerung ausschließlich per Tastatur; es gibt keine Mauskurs-Hilfe.
 
 ## Prüfung und weitere Arbeit
+
+Nach dem ersten menschlichen Flugtest ist das [Folgekonzept für Ankern, Mannschaft und sichtbaren Erkundungsnebel](ankern-mannschaft-nebel.md) ausgearbeitet. Die Bezeichnung im HUD lautet bereits Mannschaft. Haltemodus, Presets, neue Wirkungskurven und flächiger Nebel sind der nächste geplante Ausbau; die folgenden Prüfberichte beziehen sich auf die bisherige Mechanik.
 
 Die Prüfevidenz steht in [Validierung](demo-validierung.md). Automatisierte Regelprüfungen ersetzen keine menschlichen Flug-, Klang- oder Balancingtests. B benötigt nach dem funktionalen Prototyp ausgearbeitete Modelle, Effekte, Beleuchtung und hochwertigere gemalte Texturen.
 

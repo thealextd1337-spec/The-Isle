@@ -16,7 +16,7 @@ Stand: 11. Oktober 2026. Ausgangspunkt: reines Planungsrepository, Commit `1d42d
 |---|---|---|
 | Seedwelt, Abstand, Häfen, offene Rückroute | 200 Seeds, wiederholte Erzeugung; 8.806 Assertions in sieben Kategorien | bestanden |
 | Passagen und Fog of War | Ebenenfilter, außerhalb Gate abgewiesen, Sturm sperrt Hauptgate, Alternative bleibt nutzbar | bestanden |
-| Hauptcrew und Untercrew | Gesamtzahl, reservierte Stationsplätze, keine Arbeit im Transit; Hauptcrew lebt bei Modulschäden, stirbt erst bei Hull 0 | bestanden |
+| Hauptbesatzung und Mannschaft | Gesamtzahl, reservierte Stationsplätze, keine Arbeit im Transit; Hauptcrew lebt bei Modulschäden, stirbt erst bei Hull 0 | bestanden |
 | Reparaturgrenzen | Zielwechsel erneuert keine Vorräte; tatsächliche zeitabhängige Reparatur verbraucht Teile und Budget; Hafen kostet Geld | bestanden |
 | Reiseablauf | Im Play Mode: Startdock, Kauf, Winde, Bergung, unterer Hafen, einmalige Lieferung, Sturm, Rückroute, Ausbau | bestanden |
 | Flugphysik | echte FixedUpdates: schweres Schiff beschleunigt langsamer und verbraucht mehr, Trägheit, Bremse, Drehmoment, Gegensteuern, abklingende Drehbewegung, Winddrift | bestanden |
@@ -65,7 +65,7 @@ Noch offen: menschliches Fluggefühl, 3–5 Minuten Kampfdauer, Preisbalance, La
 
 ## Windows-Artefakt
 
-Der abschließende Build `build_aa4ed9708949` ist **Succeeded**, mit 0 Fehlern und 106.933.760 Byte. Eine Warnung meldet die im Player deaktivierte Pipeline-Editorbrücke; die Demo benötigt diese Brücke zur Laufzeit nicht. Die EXE wurde separat gestartet: Direct3D 11 und PhysX initialisierten, der Prozess blieb aktiv, das Player-Log enthielt keine Exceptions oder Fehler. Dieser Starttest ersetzt keine menschliche Bedienungsprüfung.
+Der abschließende Build `build_4fbeab0b195a` ist **Succeeded**, mit 0 Fehlern und 106.933.760 Byte. Eine Warnung meldet die im Player deaktivierte Pipeline-Editorbrücke; die Demo benötigt diese Brücke zur Laufzeit nicht. Die EXE wurde separat gestartet: Direct3D 11 und PhysX initialisierten, der Prozess blieb aktiv, das Player-Log enthielt keine Exceptions oder Fehler. Dieser Starttest ersetzt keine menschliche Bedienungsprüfung.
 
 Prüfberichte liegen unter `docs/validation/`. Die lokale Windows-ZIP befindet sich in `artifacts/TheIsle-FirstVoyage-Windows.zip` (etwa 38 MiB). Zum Spielen die vollständige ZIP entpacken und `TheIsle.exe` starten; Data- und Laufzeitordner müssen neben der EXE bleiben. Build und ZIP sind absichtlich nicht im Quellcode-Repository enthalten.
 

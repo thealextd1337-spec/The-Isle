@@ -1,12 +1,13 @@
 ﻿{
     "status":  "completed",
     "result":  "Succeeded",
-    "buildId":  "build_aa4ed9708949",
+    "buildId":  "build_4fbeab0b195a",
     "sizeBytes":  106933760,
     "errors":  0,
     "warnings":  [
                      {
                          "message":  "Pipeline: No RuntimePipelineConfig asset found (Project Settings \u003e Pipeline \u003e Runtime). Pipeline will be disabled in Player builds."
                      }
-                 ]
+                 ],
+    "change":  "Mannschaft terminology only; new mechanics remain in concept"
 }

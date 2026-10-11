@@ -1,8 +1,8 @@
 ﻿{
     "status":  "passed",
-    "runningAfterSeconds":  30.1,
+    "runningAfterSeconds":  35,
     "engine":  "6000.6.4f1",
     "graphics":  "Direct3D 11 / NVIDIA GeForce RTX 4070",
     "runtimeErrors":  0,
-    "scope":  "startup and log inspection, no human interaction"
+    "scope":  "startup and log inspection after Mannschaft UI rename, no human interaction"
 }

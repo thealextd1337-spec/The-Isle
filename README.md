@@ -11,6 +11,7 @@ Jeder neue Durchlauf beginnt mit einer anderen Welt. Fog of War verbirgt unbekan
 - [Spielplanung und Vorschläge für Weltereignisse](docs/spielplanung.md)
 - [Grafikstil: vier gezeichnete Designrichtungen](docs/grafikstil.md)
 - [Inhalt und Ablauf der ersten Demo](docs/erste-demo.md)
+- [Folgekonzept: Ankern, Mannschaft und sichtbarer Nebel](docs/ankern-mannschaft-nebel.md)
 - [Technische Prüfung und Einschränkungen](docs/demo-validierung.md)
 
 ## Erste Demo starten
