@@ -10,6 +10,7 @@ Der Spieler erkundet eine Welt aus Inseln über den Wolken. Sein Zeppelin ist Fa
 
 Festgelegt sind:
 
+- Gewählter Grafikstil: **B — Gemaltes Abenteuer** in isometrischer Darstellung.
 - Erkundung und Abenteuer bilden einen Schwerpunkt.
 - Der Spieler fliegt den Zeppelin selbst.
 - Das Fliegen besitzt etwas Physik und spürbare Trägheit.
@@ -295,7 +296,7 @@ Bei fortsetzbaren Partien werden der aktuelle Ereigniszustand und seine Folgen g
 
 ## 11. Grafik und Lesbarkeit — Vorschlag
 
-Festgelegt ist der isometrische Comic-Grafikstil. Vor der Umsetzung soll die konkrete Art Direction anhand gezeichneter Vorschläge ausgewählt werden. Die [vier Designrichtungen](grafikstil.md) und ihre Originalbilder sind Bestandteil der Planung; eine Auswahl wurde noch nicht getroffen.
+Festgelegt ist der isometrische Comic-Grafikstil **B — Gemaltes Abenteuer**. Die [Designrichtungen](grafikstil.md) und ihre Originalbilder sind Bestandteil der Planung; B ist die gewählte Referenz. Gemalte Wolken, warme Beleuchtung und sanfte Materialtexturen prägen die weitere visuelle Entwicklung.
 
 Markante Silhouetten sollen Schiffsgrößen, Modularten und Fraktionszugehörigkeit lesbar machen. Inselkulturen erhalten eigene Bauformen und Farben.
 
@@ -309,9 +310,9 @@ Notlandungen, beschädigte Module, verlorene Fracht und Abschleppkosten können 
 
 Die Folgen vollständiger Schiffzerstörung, möglicher Besatzungsverluste und gescheiterter Aufträge sind offen. Ebenso offen ist, ob Fortschritte über neu gestartete Durchläufe hinweg bestehen bleiben.
 
-## 13. Erster spielbarer Prototyp — Vorschlag
+## 13. Erste Demo — Vorschlag
 
-Ziel ist, eine vollständige Reise erlebbar zu machen: Waren kaufen, selbst fliegen, Wind nutzen, eine Passage entdecken, in die zweite Ebene gelangen, eine Gelegenheit wahrnehmen, einen Hafen erreichen und den Erlös in einen Ausbau investieren.
+Ziel ist, eine vollständige Reise in etwa 20–30 Minuten erlebbar zu machen: Waren kaufen, selbst fliegen, Wind nutzen, eine Passage entdecken, in die zweite Ebene gelangen, eine Gelegenheit wahrnehmen, einen Hafen erreichen und den Erlös in einen Ausbau investieren. Der genaue Ablauf und die Abnahmekriterien stehen in [Inhalt und Ablauf der ersten Demo](erste-demo.md).
 
 ### Begrenzter Inhalt
 
@@ -325,13 +326,11 @@ Ziel ist, eine vollständige Reise erlebbar zu machen: Waren kaufen, selbst flie
 - Eine Piratenbegegnung mit Flucht- und Verhandlungsmöglichkeit.
 - Zwei Fraktionen mit einer einfachen Ruf- oder Zugangsentscheidung.
 
-### Ereignisse in sinnvoller Reihenfolge
+### Weltereignis und spätere Erweiterung
 
-1. **Sturmfront:** Prüft Wind, Routenwahl und eine vorübergehende Veränderung eines Übergangs.
-2. **Rohstofffund:** Prüft Entdeckungsbelohnung und veränderte Handelsnachfrage.
-3. **Fraktionsblockade:** Prüft Beziehungen, Gebühren und die Bedeutung der Alternativroute.
+Die erste Demo enthält **eine Sturmfront**. Sie verändert den Wind, beeinflusst eine Passage und erzeugt Reparaturbedarf an einem Hafen. Eine erreichbare Alternative ermöglicht die Rückreise.
 
-Zunächst wird ein Ereignis einzeln erprobt. Weitere werden ergänzt, wenn der vollständige Reiseablauf verständlich funktioniert. Inselwanderung, Inselbruch und dauerhafte Hafengründung folgen in späteren Ausbaustufen.
+Weitere Ausbaustufen können Rohstofffunde und Fraktionsblockaden ergänzen. Inselwanderung, Inselbruch und dauerhafte Hafengründung folgen später. Die erste Demo prüft zunächst den vollständigen Reiseablauf mit einem verständlichen Ereignis.
 
 ### Fragen, die der Prototyp beantworten soll
 
@@ -355,4 +354,4 @@ Zunächst wird ein Ereignis einzeln erprobt. Weitere werden ergänzt, wenn der v
 7. **Versorgung:** Energiequelle, Nachladen oder Betanken, Reparaturmaterial und laufende Mannschaftskosten?
 8. **Erkundungsinteraktion:** Was tut der Spieler konkret an Inseln, Ruinen und Lagerstätten — etwa scannen, bergen, handeln oder besondere Flugmanöver ausführen?
 
-Diese Punkte sind bewusst nicht als bereits beschlossene Features dargestellt. Der unmittelbar nächste Planungsschritt ist die Auswahl des Grafikstils. Anschließend werden die Start-/Speicherlogik und der Umfang des ersten Flugprototyps festgelegt.
+Diese Punkte sind bewusst nicht als bereits beschlossene Features dargestellt. Der Grafikstil B ist ausgewählt. Die erste Demo ist als konkreter Umfang vorgeschlagen; vor der Umsetzung werden vor allem Zielplattform, Technik und Start-/Speicherlogik entschieden.
