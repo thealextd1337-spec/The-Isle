@@ -2,6 +2,8 @@
 
 Stand: 11. Oktober 2026
 
+Die weitere gemeinsame Planung richtet sich nach dem [Modulplan](modulplan.md). Es wird jeweils ein Modul ausgearbeitet und erprobt. Dieses Dokument bleibt der Überblick über das Gesamtspiel.
+
 Dieses Dokument hält die bisher gemeinsam entwickelte Spielidee fest. **Festgelegt** bezeichnet ausdrückliche Wünsche des Auftraggebers. **Vorschlag** bezeichnet aus diesen Wünschen abgeleitete Mechaniken, die noch abgestimmt und erprobt werden sollen. **Offen** bezeichnet Entscheidungen, die den weiteren Entwurf beeinflussen.
 
 ## 1. Spielidee und festgelegte Anforderungen

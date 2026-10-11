@@ -2,6 +2,8 @@
 
 Stand: 11. Oktober 2026. Folgekonzept nach dem ersten menschlichen Flugtest. Das Fluggefühl wurde vom Spieler positiv beurteilt und bildet die Grundlage. Neue Zahlen sind Abstimmungswerte für den nächsten Prototyp, keine bereits gemessene Balance.
 
+**Planungsstand:** Dieser gemeinsame Vorentwurf ist eine Ideensammlung. Die weitere Planung folgt dem [Modulplan](modulplan.md) und behandelt jeweils ein Modul. Ankerdetails gehören zu Modul 1, Mannschaftswirkungen zu Modul 2 und Nebel zu Modul 4. Die unten vorgeschlagene gemeinsame Umsetzung wird durch dieses schrittweise Vorgehen ersetzt.
+
 ## Festgelegt und vorgeschlagen
 
 **Festgelegt:** Die bisherige Unterbesatzung heißt **Mannschaft**. Die Hauptbesatzung führt weiterhin ihre Stationen und kann nur bei kompletter Schiffzerstörung sterben. Mannschaft wird links unten zugewiesen. Viel Navigation soll Reisen lohnender machen; im Kampf soll eine Verlagerung zu den Geschützen sinnvoll sein. Ankern ist überall in der aktuellen Wolkenebene als energieverbrauchender Haltemodus möglich. Das Lichten darf Zeit kosten. Sichtbarer Nebel über der Weltkarte soll sich bei Erkundung langsam lichten.
